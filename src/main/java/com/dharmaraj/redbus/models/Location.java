@@ -8,7 +8,7 @@ import lombok.Setter;
 @Embeddable
 @Getter
 @Setter
-public class Location extends BaseModel {
+public class Location {
 
     @Column(nullable = false)
     private Double latitude;

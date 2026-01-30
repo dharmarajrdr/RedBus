@@ -8,7 +8,7 @@ import lombok.Setter;
 @Embeddable
 @Getter
 @Setter
-public class Account extends BaseModel {
+public class Account {
 
     @Column(nullable = false)
     private String name;

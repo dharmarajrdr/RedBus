@@ -1,6 +1,7 @@
 package com.dharmaraj.redbus.models;
 
 import com.dharmaraj.redbus.enums.Amenity;
+import com.dharmaraj.redbus.enums.BusType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,9 @@ public class Bus extends BaseModel {
 
     @ManyToOne
     private Operator operator;
+
+    @Enumerated(EnumType.STRING)
+    private BusType busType;
 
     @Column(nullable = false, unique = true)
     private String licenseNumber;

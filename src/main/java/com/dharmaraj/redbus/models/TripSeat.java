@@ -22,6 +22,9 @@ public class TripSeat extends BaseModel {
     @Enumerated(EnumType.STRING)
     private SeatStatus seatStatus;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private User seatedBy;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Ticket ticket;
 }

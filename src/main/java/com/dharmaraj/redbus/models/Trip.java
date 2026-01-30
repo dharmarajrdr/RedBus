@@ -19,6 +19,9 @@ public class Trip extends BaseModel {
     @JoinColumn(nullable = false)
     private User driver;
 
+    @Embedded
+    private Location currentLocation;
+
     @OneToMany(mappedBy = "trip", orphanRemoval = true, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<TripBusStop> stops;
 }
