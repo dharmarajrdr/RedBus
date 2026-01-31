@@ -1,7 +1,6 @@
 package com.dharmaraj.redbus.dtos.response;
 
 import com.dharmaraj.redbus.enums.Amenity;
-import com.dharmaraj.redbus.enums.CurrencyCode;
 import com.dharmaraj.redbus.models.*;
 import lombok.Getter;
 
@@ -15,8 +14,6 @@ public class BusPreview implements RowToDtoConverter<Trip, BusPreview> {
     private JourneyTime journeyTime;
 
     private RevisedPrice price;
-
-    private CurrencyCode currencyCode;
 
     private RatingSummary rating;
 
