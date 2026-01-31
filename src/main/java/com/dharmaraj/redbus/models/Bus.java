@@ -33,4 +33,7 @@ public class Bus extends BaseModel {
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "bus_amenities", joinColumns = @JoinColumn(name = "bus_id"))
     private Set<Amenity> amenities;
+
+    @Embedded
+    private RatingSummary rating;
 }
