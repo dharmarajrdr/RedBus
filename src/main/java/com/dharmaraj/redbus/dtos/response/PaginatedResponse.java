@@ -1,6 +1,7 @@
 package com.dharmaraj.redbus.dtos.response;
 
 import com.dharmaraj.redbus.enums.SortOrder;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
 import lombok.Getter;
 import org.springframework.data.domain.Page;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Getter
 @Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PaginatedResponse<S, D extends RowToDtoConverter<S, D>> {
 
     private List<D> data;

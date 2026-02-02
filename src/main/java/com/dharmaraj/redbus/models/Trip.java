@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Getter
@@ -21,6 +22,9 @@ public class Trip extends BaseModel {
 
     @Embedded
     private Location currentLocation;
+
+    @Column(nullable = false)
+    private LocalDate tripDate;
 
     @OneToMany(mappedBy = "trip", orphanRemoval = true, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<TripBusStop> stops;
